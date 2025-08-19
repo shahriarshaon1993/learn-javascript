@@ -1,8 +1,11 @@
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
+"use strict";
 
-    console.log(`${this.name} is ${this.age} years old.`);
-}
+const PrintName = function () {
+    console.log(this.name);
+};
 
-const sakib = new Person("Sakib", 35);
+const sakib = {
+    name: "Sakib",
+};
+
+PrintName();
