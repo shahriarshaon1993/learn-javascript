@@ -11,4 +11,6 @@ let v1 = "Handsome";
 let v2 = "All-rounder";
 let v3 = "Best Player";
 
-printName.call(sakib, v1, v2, v3);
+const v = [v1, v2, v3];
+
+printName.apply(sakib, v);
