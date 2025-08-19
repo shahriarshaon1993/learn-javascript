@@ -1,15 +1,8 @@
-const printName = function (v1, v2, v3) {
-    console.log(`${this.name} is ${v1}, ${v2}, and ${v3}.`);
-};
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
 
-const sakib = {
-    name: "Sakib",
-    age: 35,
-};
+    console.log(`${this.name} is ${this.age} years old.`);
+}
 
-let v1 = "Handsome";
-let v2 = "All-rounder";
-let v3 = "Best Player";
-
-const foo = printName.bind(sakib, v1, v2, v3);
-foo();
+const sakib = new Person("Sakib", 35);
