@@ -1,19 +1,14 @@
-const Person = function (name, age) {
-    return {
-        name: name,
-        age: age,
-        printName: function () {
-            console.log(this.name);
-        },
-        father: {
-            name: "Mr. John Deo",
-            printName: function () {
-                console.log(this.name);
-            },
-        },
-    };
+const printName = function (v1, v2, v3) {
+    console.log(`${this.name} is ${v1}, ${v2}, and ${v3}.`);
 };
 
-const sakib = Person("Sakib", 35);
-sakib.printName();
-sakib.father.printName(); // Mr. John Deo
+const sakib = {
+    name: "Sakib",
+    age: 35,
+};
+
+let v1 = "Handsome";
+let v2 = "All-rounder";
+let v3 = "Best Player";
+
+printName.call(sakib, v1, v2, v3);
