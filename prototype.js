@@ -1,10 +1,6 @@
 function Person(name, age) {
-    const person = Object.create(Person.prototype);
-
-    person.name = name;
-    person.age = age;
-
-    return person;
+    this.name = name;
+    this.age = age;
 }
 
 Person.prototype = {
@@ -19,7 +15,7 @@ Person.prototype = {
     },
 };
 
-const sakib = Person("Sakib", 36);
-const tamim = Person("Tamim", 40);
+const sakib = new Person("Sakib", 36);
+const tamim = new Person("Tamim", 40);
 
 tamim.play();
